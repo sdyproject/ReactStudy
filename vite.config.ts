@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 //코드 간결하기 위해 쓰는 
 import { fileURLToPath, URL } from 'url'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -18,10 +19,10 @@ export default defineConfig({
       }
   },
   //SCSS 전역 사용
-  css:{
+  css: {
     preprocessorOptions:{
       scss:{
-          additionalData:'@import * ./src/assets/styles/main.scss',
+          additionalData:'@import "./src/assets/styles/main.scss";',
       },
     },
   },
